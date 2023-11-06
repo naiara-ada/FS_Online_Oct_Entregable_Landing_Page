@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Futura", sans-serif !important;
+    src: url('fonts/Futura-CondensedLight.otf');
+    font-weight: lighter;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.izquierda{
+    display: flex;
+    align-items: center;    
+    width: 20%;
+    overflow: hidden;
+}
+.izquierda img{
+    transform: scale(0.6);
+}
+.menu{    
+    width: 60%;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+header li{
+    list-style: none;
+    
+}
+nav a{
+    text-decoration: none;
+    color: #009D95;
+    font-family: futura;
+
+}
+.derecha{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    width: 20%;
+}
+.derecha img{
+    width: 40px;
+    height: 40px;
+}
+.central{
+    background-image: url('img/fotoskin.jpg');
+    position: absolute;
+    height: 500px;
+}
+.central img{
+    width: 100%;
+    position: relative;
+    
+}
+
+@media (max-width: 768px){
+    menu{
+        order:1;
+    }
+    nav a{
+      color: #ea99a0;    
+    }
+    .menu ul{
+        justify-content: column;
+    }
+    .izquierda{
+        order: 2;
+    }
+    .izquierda img{
+        transform: scale(0.5);
+    }
+    .derecha{
+        order:3;
+    }
+
+}
