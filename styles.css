@@ -1,14 +1,17 @@
 @font-face {
-    font-family: "Futura", sans-serif !important;
-    src: url('fonts/Futura-CondensedLight.otf');
-    font-weight: lighter;
+    font-family: "Futura";
+    src: url('fonts/Futura\ Light\ font.ttf');
 }
 
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: space-between;  
+    position: fixed;  
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
 }
 
 .izquierda{
@@ -17,9 +20,11 @@ header{
     width: 20%;
     overflow: hidden;
 }
+
 .izquierda img{
     transform: scale(0.6);
 }
+
 .menu{    
     width: 60%;
 }
@@ -27,11 +32,10 @@ header{
 .navegacion{
     display: flex;
     flex-direction: row;
-    font-size: 18px;
+    font-size: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    
+    gap: 30px;    
 }
 
 header li{
@@ -46,9 +50,8 @@ nav a{
 }
 .derecha{
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
     align-items: center;
-    
     width: 20%;
 }
 .derecha img{
@@ -56,26 +59,24 @@ nav a{
     height: 40px;
 }
 .central{
-    background-image: url('img/fotoskin.jpg');
-    position: absolute;
-    height: 500px;
+    
 }
 .central img{
-    width: 100%;
-    position: relative;
+    width: 100%;     
+}
+.boton{
+    position: fixed;
+    top: 85%;
+    transform: scale(0.8);
     
 }
 
 @media (max-width: 768px){
-    menu{
-        order:1;
+    .navegacion{
+        display: flex;
+        flex-direction: column;
     }
-    nav a{
-      color: #ea99a0;    
-    }
-    .menu ul{
-        justify-content: column;
-    }
+       
     .izquierda{
         order: 2;
     }
@@ -85,5 +86,10 @@ nav a{
     .derecha{
         order:3;
     }
-
 }
+@media (max-width: 480px){
+    nav a{
+        color: #ea99a0;    
+      }
+}
+
